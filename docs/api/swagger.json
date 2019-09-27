@@ -1,0 +1,140 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "SmartStart WebAPI"
+  },
+  "host": "webapidev.smartstartinc.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/Shared/StoreLocations/LookupByZip": {
+      "get": {
+        "tags": [
+          "StoreLocations"
+        ],
+        "operationId": "StoreLocations_LookupByZip",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "apiKey",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "7FE2D98C-FA28-443D-8A66-38F9ADBDB296"
+          },
+          {
+            "name": "countryISOCode",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "default": "US"
+          },
+          {
+            "name": "zipCode",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "default": "76226"
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "default": "7FE2D98C-FA28-443D-8A66-38F9ADBDB296"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SmartStartWebAPI.Business.Shared.Models.StoreLocation"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SmartStartWebAPI.Business.Shared.Models.StoreLocation": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "StoreNumber": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "Directions": {
+          "type": "string"
+        },
+        "HoursOfOperation": {
+          "type": "string"
+        },
+        "Latitude": {
+          "type": "string"
+        },
+        "Longitude": {
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "ShortName": {
+          "type": "string"
+        },
+        "PhoneNumber": {
+          "type": "string"
+        },
+        "WebPhoneNumber": {
+          "type": "string"
+        },
+        "AddressLine1": {
+          "type": "string"
+        },
+        "AddressLine2": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "PostalCode": {
+          "type": "string"
+        },
+        "DistanceFromOrigin": {
+          "format": "double",
+          "type": "number"
+        },
+        "EmailAddress": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
