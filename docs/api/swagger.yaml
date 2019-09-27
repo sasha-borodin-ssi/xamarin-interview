@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  version: v1
+  title: SmartStart WebAPI
+paths:
+  /api/Shared/StoreLocations/LookupByZip:
+    get:
+      tags:
+        - StoreLocations
+      operationId: StoreLocations_LookupByZip
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+            default: Bearer abc123
+        - name: countryISOCode
+          in: query
+          required: true
+          schema:
+            type: string
+            default: US
+        - name: zipCode
+          in: query
+          required: true
+          schema:
+            type: string
+            default: "76226"
+        - name: companyId
+          in: query
+          required: true
+          schema:
+            type: string
+            default: 7FE2D98C-FA28-443D-8A66-38F9ADBDB296
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
+                    ls.StoreLocation"
+            text/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
+                    ls.StoreLocation"
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
+                    ls.StoreLocation"
+            text/xml:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
+                    ls.StoreLocation"
+servers:
+  - url: https://webapidev.smartstartinc.com
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    SmartStartWebAPI.Business.Shared.Models.StoreLocation:
+      type: object
+      properties:
+        Id:
+          format: uuid
+          type: string
+          example: 00000000-0000-0000-0000-000000000000
+        StoreNumber:
+          type: string
+        City:
+          type: string
+        Directions:
+          type: string
+        HoursOfOperation:
+          type: string
+        Latitude:
+          type: string
+        Longitude:
+          type: string
+        Message:
+          type: string
+        Name:
+          type: string
+        ShortName:
+          type: string
+        PhoneNumber:
+          type: string
+        WebPhoneNumber:
+          type: string
+        AddressLine1:
+          type: string
+        AddressLine2:
+          type: string
+        State:
+          type: string
+        PostalCode:
+          type: string
+        DistanceFromOrigin:
+          format: double
+          type: number
+        EmailAddress:
+          type: string
