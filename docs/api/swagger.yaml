@@ -6,17 +6,10 @@ paths:
   /api/Shared/StoreLocations/LookupByZip:
     get:
       tags:
-        - StoreLocations
-      operationId: StoreLocations_LookupByZip
+        - Store Locations
       security:
         - BearerAuth: []
       parameters:
-        - name: Authorization
-          in: header
-          required: true
-          schema:
-            type: string
-            default: Bearer abc123
         - name: countryISOCode
           in: query
           required: true
@@ -40,35 +33,26 @@ paths:
           required: false
           schema:
             type: integer
-            format: int32
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
-                    ls.StoreLocation"
-            text/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
-                    ls.StoreLocation"
-            application/xml:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
-                    ls.StoreLocation"
-            text/xml:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Mode\
-                    ls.StoreLocation"
+                type: object
+                properties:
+                  Success:
+                    type: boolean
+                  Data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/SmartStartWebAPI.Business.Shared.Models.StoreLocation"
+                  Message:
+                    type: string
+                  ErrorCode:
+                    type: number
+                  HttpStatusCode:
+                    type: number
 servers:
   - url: https://webapidev.smartstartinc.com
 components:
