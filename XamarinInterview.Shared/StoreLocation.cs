@@ -1,5 +1,5 @@
 ﻿using System;
-namespace XamarinInterview.Shared.Models
+namespace XamarinInterview.Shared
 {
     public class StoreLocation
     {

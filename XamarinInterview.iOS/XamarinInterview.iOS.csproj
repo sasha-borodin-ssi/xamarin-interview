@@ -3,7 +3,7 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-        <ProjectGuid>{6DBAB795-527B-4067-AFC7-02ECE2B9CB3A}</ProjectGuid>
+        <ProjectGuid>{AECD456B-516C-4C08-9CC9-D85500DCF6D3}</ProjectGuid>
         <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
         <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
         <OutputType>Exe</OutputType>
@@ -118,7 +118,7 @@
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="Main.storyboard" />
+        <InterfaceDefinition Include="StoreLocations.storyboard" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -128,11 +128,10 @@
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="SceneDelegate.cs" />
-        <Compile Include="ViewController.cs" />
-        <Compile Include="ViewController.designer.cs">
-            <DependentUpon>ViewController.cs</DependentUpon>
+        <Compile Include="StoreLocationsViewController.cs" />
+        <Compile Include="StoreLocationsViewController.designer.cs">
+            <DependentUpon>StoreLocationsViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
-    <Import Project="..\XamarinInterview.Shared\XamarinInterview.Shared.projitems" Label="Shared" Condition="Exists('..\XamarinInterview.Shared\XamarinInterview.Shared.projitems')" />
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -11,8 +11,8 @@ using UIKit;
 
 namespace XamarinInterview.iOS
 {
-    [Register("ViewController")]
-    partial class ViewController
+    [Register("StoreLocationsViewController")]
+    partial class StoreLocationsViewController
     {
     }
 }
