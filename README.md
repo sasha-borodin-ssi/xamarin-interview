@@ -34,8 +34,9 @@ The solution includes 3 projects, each of which require code to be added:
 1. When finished, submit a pull request for your changes.
 
 ## Sample Solution Screenshots
+[Droid demo movie](https://github.com/sasha-borodin-ssi/xamarin-interview/raw/master/docs/screenshots/droid.mov)
+
 ![initial](docs/screenshots/droid-initial.png)
 ![input error](docs/screenshots/droid-input-error.png)
 ![search error](docs/screenshots/droid-search-error.png)
 ![search results](docs/screenshots/droid-search-results.png)
-![demo](docs/screenshots/droid.mov)
