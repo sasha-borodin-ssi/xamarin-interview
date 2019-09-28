@@ -22,11 +22,11 @@ Your solution should intake a 5-digit Zip Code from the user.  It should then ca
 
 The solution includes 3 projects, each of which require code to be added:
 1. XamarinInterview.Shared
-  - This project contains a “service” class that should perform the REST API call, and parse its response.
+    - This project contains a “service” class that should perform the REST API call, and parse its response.
 1. XamarinInterview.iOS
-  - This project contains a view controller class and storyboard file to support the single search/results view.
+    - This project contains a view controller class and storyboard file to support the single search/results view.
 1. XamarinInterview.Droid
-  - This project contains an action class and layout files to support the single search/results view.
+    - This project contains an action class and layout files to support the single search/results view.
 
 ## Instructions
 1. Start by cloning this repository.
