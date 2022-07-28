@@ -7,6 +7,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamarinInterview.Shared", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinInterview.iOS", "XamarinInterview.iOS\XamarinInterview.iOS.csproj", "{AECD456B-516C-4C08-9CC9-D85500DCF6D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F0FDF411-7D02-4B41-9648-6B8930C999B0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator

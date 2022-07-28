@@ -1,12 +1,6 @@
-﻿using System;
-using Android.App;
-using Android.Content.PM;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Support.Design.Widget;
-using Android.Support.V7.App;
-using Android.Views;
-using Android.Widget;
+using AndroidX.AppCompat.App;
 
 namespace XamarinInterview.Droid
 {
@@ -20,7 +14,7 @@ namespace XamarinInterview.Droid
             SetContentView(Resource.Layout.store_locations);
 
             // TODO: perform search when "search" button is tapped, if zip code entered;
-            // or, display a message that no zip code has bee been entered
+            // or, display a message that no zip code has been entered
 
             // TODO: update result RecyclerView with new RecyclerView.Adapter created from search results (if any);
             // or, display a message that no results were found;

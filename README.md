@@ -6,10 +6,10 @@ This repository is a starting template for performing the Smart Start Mobile Tea
 ## System Requirements
 Ideally, you will build out solutions for both iOS and Android, which requires that you develop on a Mac.  However, if you do not have a Mac, you can stick with just an Android implementation, and develop in Windows.
 ### Mac (preferred)
-- Visual Studio 8.3
+- Visual Studio 2022 for Mac (iOS and Android)
 - Xcode 11
 ### Windows
-- Visual Studio 2019
+- Visual Studio 2022 (Android only)
 
 ## Coding Challenge
 Swagger UI documentation and test harness for this endpoint can be accessed [here](https://sasha-borodin-ssi.github.io/xamarin-interview/api/)
@@ -22,16 +22,22 @@ Your solution should intake a 5-digit Zip Code from the user.  It should then ca
 
 The solution includes 3 projects, each of which require code to be added:
 1. XamarinInterview.Shared
-    - This project contains a “service” class that should perform the REST API call, and parse its response.
 1. XamarinInterview.iOS
-    - This project contains a view controller class and storyboard file to support the single search/results view.
 1. XamarinInterview.Droid
-    - This project contains an action class and layout files to support the single search/results view.
 
 ## Instructions
-1. Start by cloning this repository.
-1. Commit incremental changes to your local repository.
-1. When finished, submit a pull request for your changes.
+1. Start by cloning this repository to your development workstation.
+    - `git clone https://github.com/sasha-borodin-ssi/xamarin-interview.git`
+1. Work to complete necessary code in the `XamarinInterview.Shared` project.
+    - This project contains a “service” class that should perform the REST API call, and parse its response.
+1. Work to complete necessary code in the `XamarinInterview.Droid` project.
+    - This project contains an action class and layout files to support the single search/results view.
+1. Work to complete necessary code in the `XamarinInterview.iOS` project.
+    - This project contains a view controller class and storyboard file to support the single search/results view.
+    - ***This part is optional***.  Complete this code ONLY if
+        - You are able and wanting to demonstate iOS competency.
+        - Your development workstation is a Mac.
+1. Be prepared to discuss your code, and demonstrate the working app(s).
 
 ## Sample Solution Screenshots
 [Droid demo movie](https://github.com/sasha-borodin-ssi/xamarin-interview/raw/master/docs/screenshots/droid.mov)
